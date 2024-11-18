@@ -28,5 +28,10 @@
   /* Png */
 
   .png {
-    width: 20px;
+    width: 300px;
+    border-radius: 10%;
+  }
+
+  /* buttons */
+  .buttons {
   }

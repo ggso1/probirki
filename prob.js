@@ -1,4 +1,4 @@
-[
+const data = [
     {
         "code": "0 0 0",
         "name": "Порожній келих",
@@ -157,6 +157,49 @@
     {
         "code": "1 3 3",
         "name": "Тайна морів",
-        "description": "Сильний і насичений, залишає післясмак солоних глибин."
+        "description": "Сильний і насичений, залишає післясмак солоних глибин.",
+        // "price": "25 $",
+        // "img": "27.png",
     }
 ]
+
+
+    
+    function changeValue(inputId, delta) {
+        const input = document.getElementById(inputId);
+        let currentValue = parseInt(input.value);
+        currentValue += delta;
+
+        if (currentValue < 0) currentValue = 3;
+        if (currentValue > 3) currentValue = 0;
+
+        input.value = currentValue;
+}
+  
+function mix() {
+    //const buttonMix = document.getElementById("mix")
+    const input1 = document.getElementById("zillia1");
+    const input2 = document.getElementById("zillia2");
+    const input3 = document.getElementById("zillia3");
+    const code = input1.value + " " + input2.value + " " + input3.value
+    console.log(code)
+    choosecoctail(code)
+}
+
+function choosecoctail(code) {
+    data.forEach((element) => {
+        if (element.code == code) {
+            console.log(element.name)
+            console.log(element.description)
+            document.getElementById("name").innerText = element.name
+            document.getElementById("description").innerText = element.description
+        }
+    })
+
+    
+}
+
+
+
+
+    
