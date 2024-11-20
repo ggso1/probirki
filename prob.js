@@ -145,7 +145,7 @@ const data = [
         let currentValue = parseInt(input.value);
         currentValue += delta;
 
-        if (currentValue <= 1) currentValue = 3;
+        if (currentValue = 1) currentValue = 3;
         if (currentValue > 3) currentValue = 1;
 
         input.value = currentValue;
